@@ -1,0 +1,55 @@
+body 
+{ 
+    font-family: system-ui, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background: #f5f7fa; 
+}
+header 
+{ 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+main 
+{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+#cy-container 
+{ 
+    height: 500px; 
+    background: #fff; 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+}
+#controls 
+{ 
+    display: flex; 
+    gap: 10px; 
+    justify-content: center; 
+}
+button 
+{ 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    border: none; 
+    background: #2563eb; 
+    color: #fff; 
+    border-radius: 4px; 
+}
+button:hover 
+{ 
+    background: #1d4ed8; 
+}
+#log 
+{ 
+    background: #1e293b; 
+    color: #e2e8f0; 
+    padding: 12px; 
+    border-radius: 6px; 
+    min-height: 60px; 
+    font-family: monospace; 
+}
