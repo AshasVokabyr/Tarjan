@@ -3,21 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Алгоритм Тарьяна — Визуализация</title>
+  <title>Алгоритм Тарьяна — Пошаговая визуализация</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Визуализация алгоритма Тарьяна</h1>
+    <h1>🔍 Алгоритм Тарьяна</h1>
+    <p>Поиск сильно связных компонент (SCC) | Ручное пошаговое управление</p>
   </header>
+
   <main>
     <div id="cy-container"></div>
+
+    <!-- Панель управления (только ручной режим) -->
     <div id="controls">
-      <button id="btn-run">Запустить</button>
-      <button id="btn-step">Шаг</button>
-      <button id="btn-reset">Сброс</button>
+      <button id="btn-prev" class="btn-secondary" disabled>⏮ Назад</button>
+      <button id="btn-next" class="btn-primary" disabled>Вперёд ⏭</button>
+      <button id="btn-reset" class="btn-warning" disabled>↺ Сброс</button>
     </div>
-    <div id="log">Ожидание графа...</div>
+
+    <!-- Информационная панель -->
+    <div id="info-panel">
+      <div class="info-section">
+        <h4>📊 Статус</h4>
+        <div id="status">Загрузка данных...</div>
+      </div>
+      <div class="info-section">
+        <h4>📚 Стек</h4>
+        <div id="stack-display">[ ]</div>
+      </div>
+      <div class="info-section">
+        <h4>🔢 Найдено компонент</h4>
+        <div id="components-list">—</div>
+      </div>
+    </div>
+
+    <div id="log">Инициализация...</div>
   </main>
 
   <script src="lib/cytoscape.min.js"></script>
