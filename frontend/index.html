@@ -13,20 +13,36 @@
   </header>
 
   <main>
+    <!-- 🆕 Панель ввода графа -->
+    <div id="graph-input-panel">
+      <h3>📝 Настройка графа</h3>
+      <div class="input-row">
+        <div class="input-group">
+          <label for="nodes-input">Вершины (через запятую):</label>
+          <input type="text" id="nodes-input" value="1, 2, 3, 4" placeholder="1, 2, 3, 4">
+        </div>
+        <div class="input-group">
+          <label for="edges-input">Рёбра (формат: от->к, через запятую):</label>
+          <input type="text" id="edges-input" value="1->2, 2->3, 3->1, 3->4" placeholder="1->2, 2->3, 3->1, 3->4">
+        </div>
+      </div>
+      <button id="btn-apply-graph" class="btn-primary">🔄 Загрузить граф</button>
+    </div>
+
     <div id="cy-container"></div>
 
-    <!-- Панель управления (только ручной режим) -->
+    <!-- Панель управления -->
     <div id="controls">
       <button id="btn-prev" class="btn-secondary" disabled>⏮ Назад</button>
       <button id="btn-next" class="btn-primary" disabled>Вперёд ⏭</button>
       <button id="btn-reset" class="btn-warning" disabled>↺ Сброс</button>
     </div>
 
-    <!-- Информационная панель -->
+    <!-- Инфо-панели -->
     <div id="info-panel">
       <div class="info-section">
         <h4>📊 Статус</h4>
-        <div id="status">Загрузка данных...</div>
+        <div id="status">Инициализация...</div>
       </div>
       <div class="info-section">
         <h4>📚 Стек</h4>
@@ -38,7 +54,7 @@
       </div>
     </div>
 
-    <div id="log">Инициализация...</div>
+    <div id="log">Загрузка...</div>
   </main>
 
   <script src="lib/cytoscape.min.js"></script>
