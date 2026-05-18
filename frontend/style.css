@@ -13,7 +13,7 @@ header p { color: var(--secondary); font-size: 0.95rem; }
 
 main { display: flex; flex-direction: column; gap: 16px; max-width: 1100px; margin: 0 auto; }
 
-/* 🆕 Стили панели ввода */
+/* Graph input panel */
 #graph-input-panel { background: var(--card); padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); }
 #graph-input-panel h3 { font-size: 1rem; margin-bottom: 10px; }
 .input-row { display: flex; gap: 12px; flex-wrap: wrap; }

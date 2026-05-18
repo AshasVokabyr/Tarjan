@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index < 0) {
       updateStack([]);
       updateComponents([]);
-      setStatus("Граф загружен. Используйте ⏮ Вперёд ⏭ ↺");
+      setStatus("Граф загружен. Используйте кнопки навигации");
       return;
     }
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const actionNames = {
       "init": "Инициализация", "visit": "Посещение узла", "traverse": "Переход по ребру",
       "back_edge": "Обратное ребро", "update_low": "Обновление low-link",
-      "pop_stack": "Извлечение из стека", "component_found": "✅ Компонента найдена!",
+      "pop_stack": "Извлечение из стека", "component_found": "Компонента найдена!",
       "complete": "Алгоритм завершён"
     };
     setStatus(`Шаг ${step.step + 1}/${trace.length}: ${actionNames[step.action] || step.action}`);
@@ -134,11 +134,11 @@ document.addEventListener("DOMContentLoaded", () => {
       clearVisuals();
       updateStack([]);
       updateComponents([]);
-      log(`✅ Загружено: ${data.total_steps} шагов, ${data.components.length} SCC`);
+      log(`Нагружено: ${data.total_steps} шагов, ${data.components.length} SCC`);
       updateButtons();
-      setStatus("Граф загружен. Используйте ⏮ Вперёд ⏭ ↺");
+      setStatus("Граф загружен. Используйте кнопки навигации");
     } catch (err) {
-      log(`❌ Ошибка: ${err.message}`);
+      log(`Ошибка: ${err.message}`);
       setStatus("Ошибка загрузки данных");
     }
   }
@@ -156,16 +156,16 @@ document.addEventListener("DOMContentLoaded", () => {
       
       initCytoscape({ nodes: nodes, edges: edges });
       loadTrace({ nodes: nodes, edges: edges });
-      log("🔄 Граф обновлён пользователем");
+      log("Граф обновлён пользователем");
     } catch (err) {
-      log(`❌ Ошибка ввода: ${err.message}`);
+      log(`Ошибка ввода: ${err.message}`);
       alert(`Ошибка: ${err.message}`);
     }
   });
 
   btnPrev.addEventListener("click", () => { if (currentStep > 0) { currentStep--; applyStep(currentStep); updateButtons(); } });
   btnNext.addEventListener("click", () => { if (currentStep < trace.length - 1) { currentStep++; applyStep(currentStep); updateButtons(); } });
-  btnReset.addEventListener("click", () => { currentStep = -1; applyStep(currentStep); updateButtons(); log("↺ Визуализация сброшена"); });
+  btnReset.addEventListener("click", () => { currentStep = -1; applyStep(currentStep); updateButtons(); log("Визуализация сброшена"); });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft" && !btnPrev.disabled) btnPrev.click();

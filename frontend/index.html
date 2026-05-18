@@ -8,14 +8,13 @@
 </head>
 <body>
   <header>
-    <h1>🔍 Алгоритм Тарьяна</h1>
+    <h1>Алгоритм Тарьяна</h1>
     <p>Поиск сильно связных компонент (SCC) | Ручное пошаговое управление</p>
   </header>
 
   <main>
-    <!-- 🆕 Панель ввода графа -->
     <div id="graph-input-panel">
-      <h3>📝 Настройка графа</h3>
+      <h3>Настройка графа</h3>
       <div class="input-row">
         <div class="input-group">
           <label for="nodes-input">Вершины (через запятую):</label>
@@ -26,30 +25,30 @@
           <input type="text" id="edges-input" value="1->2, 2->3, 3->1, 3->4" placeholder="1->2, 2->3, 3->1, 3->4">
         </div>
       </div>
-      <button id="btn-apply-graph" class="btn-primary">🔄 Загрузить граф</button>
+      <button id="btn-apply-graph" class="btn-primary">Загрузить граф</button>
     </div>
 
     <div id="cy-container"></div>
 
     <!-- Панель управления -->
     <div id="controls">
-      <button id="btn-prev" class="btn-secondary" disabled>⏮ Назад</button>
-      <button id="btn-next" class="btn-primary" disabled>Вперёд ⏭</button>
-      <button id="btn-reset" class="btn-warning" disabled>↺ Сброс</button>
+      <button id="btn-prev" class="btn-secondary" disabled>Назад</button>
+      <button id="btn-next" class="btn-primary" disabled>Вперёд</button>
+      <button id="btn-reset" class="btn-warning" disabled>Сброс</button>
     </div>
 
     <!-- Инфо-панели -->
     <div id="info-panel">
       <div class="info-section">
-        <h4>📊 Статус</h4>
+        <h4>Статус</h4>
         <div id="status">Инициализация...</div>
       </div>
       <div class="info-section">
-        <h4>📚 Стек</h4>
+        <h4>Стек</h4>
         <div id="stack-display">[ ]</div>
       </div>
       <div class="info-section">
-        <h4>🔢 Найдено компонент</h4>
+        <h4>Найдено компонент</h4>
         <div id="components-list">—</div>
       </div>
     </div>

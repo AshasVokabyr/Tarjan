@@ -7,7 +7,7 @@ app = FastAPI(title="Tarjan Algorithm Visualizer")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # В продакшене укажите конкретные домены
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
